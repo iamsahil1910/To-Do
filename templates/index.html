@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+
+    {% block body %}
+
+    <center>
+    <div class="jumbotron" id="top"><h1 class="display-4">To-Do</h1>
+    </div>
+
+    <div class="jumbotron">
+      <form class="center" action="/todo" method="post">
+        <input type="text" placeholder="Name" name="username"><br><br>
+        <button type="submit" class="btn btn-primary mb-2">Create To-Do</button>
+      </form>
+    </div>
+
+  </center>
+
+    {% endblock %}

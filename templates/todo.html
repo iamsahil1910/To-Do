@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+
+    {% block body %}
+    <div class="jumbotron"><h5 class="display-4">Hi! {{ username }}</h5>
+    </div>
+    <center>
+    <div class="jumbotron"><h1 class="display-4">To-Do</h1>
+    </div>
+
+    <div class="jumbotron">
+      <ul class="list-group">
+        {% for item in todo %}
+        <li class="list-group-item">{{ item }}</li>
+        {% endfor %}
+      </ul>
+      <form class="center" action="/mylist" method="post">
+        <input type="text" placeholder="List Item" name="list"><br><br>
+        <button type="submit" class="btn btn-primary mb-2">Add to List</button>
+      </form>
+    </div>
+
+  </center>
+
+    {% endblock %}
